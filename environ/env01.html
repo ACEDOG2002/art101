@@ -1,0 +1,79 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-EN">
+    <head>
+        <title>Immersive Millenium Falcon</title>
+        <link href="environ/env.css" rel="stylesheet" type="text/css" />
+        <style>
+            body {
+        margin: 0;
+        font-family: Times New Roman, Ariel;
+        overflow: hidden;
+    }
+
+    .falcon-scene {
+        background-image: url('images/falcon.png');
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        justify-content: center;
+        display: flex;
+        align-items: flex-end;
+    }
+
+
+    #jabba {
+        position: absolute;
+        
+       
+        max-width: 40%;
+        height: auto;
+        
+       
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        z-index: 1;
+    }
+
+    .text-overlay {
+        position: absolute;
+        width: 90%;
+        background-color: rgba(232, 255, 232, 0.7);
+        color: #000;
+        padding: 10px 15px;
+        text-align: center;
+        box-sizing: border-box;
+        z-index: 2;
+    }
+
+    .text-top {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .text-middle {
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+        </style>
+    </head>
+    <body>
+        <div class="falcon-scene">
+            <div class="text-overlay text-top">
+                <p> The secne starts out in a galaxy far far away where we are invited together with some fellow rebel scum!
+                <p>Punch it chewie! We gotta outrun Jabba</p>
+            </div>
+
+            <div class="text-overlay text-middle">
+                <p>I am going to get you one day Solo!</p>
+            </div>
+             <img id="jabba" src="images/jabba.png" alt="Jabba the Hutt"/>
+        </div>
+    </body>
+</html>

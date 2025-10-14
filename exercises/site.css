@@ -1,0 +1,52 @@
+BODY { background: #c0f7f0; padding: 50px;}
+H1, H2, H3, H4 {color: #303f8a; font-family: sans-serif;}
+#mypic {width: 600px;}
+p {color: rgb(255, 255, 255); }
+p {padding: dark rgb(133, 43, 43)}
+p {display: dark rgb(169, 41, 41)}
+p {font-family: "Blonde"}
+p {font-size: 21px}
+p {margin: 50px}
+P {height: 245px}
+P {width:1300px}
+P {background:rgb(110, 60, 68) or  #826482;}
+P {letter-spacing: 1px;}
+P{word-spacing: 23px;}
+P{line-height: 2;}
+#introduction h2 {font-style: italic;}
+#introduction P {font-size: 120%;}
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #f0f0f0;
+}
+h1 {
+  border-block: 5px solid rgb(56, 54, 160);
+}
+
+h2 {
+  border-block: 5px dotted blue;
+}
+
+div {
+  border-block: double;
+}
+.highlight_01 { 
+	background: #aef39a; 
+}
+.highlight_02 { 
+	background: #ffa6d8; 
+}
+.highlight {
+    background-color: rgb(253, 253, 0); /* Or any other color */
+    font-weight: bold; /* Optional: make the text bold */
+    color: rgb(33, 27, 146); /* Optional: set text color for contrast */
+}
+#me { 
+	width: 100px; 
+}
+width: 100vw;
+     or 
+ width: 50%; max-width: 400px;
