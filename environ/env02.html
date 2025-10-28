@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="env02.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="env02.js" defer></script>
     <title>Jabba's Palace</title>
 <style>
     
@@ -30,7 +32,7 @@
         position: absolute;
         width: 30%;
         max-width: 335px;
-        top: 10%;
+        top: 20%;
         right: 0%;
         z-index: 4;
     }
@@ -107,25 +109,36 @@
 </head>
 <body>
     <div class="bar">
-        <div class="text-overlay text-top">
-            <p>Jabba:</p>
-            <p>
-                <span class="aurek-besh">What are you doing here?! I thought I told you that you should stay outta here you arn't apart of my bounty gang crew!</span>
-                <span class="english">What are you doing here?! I thought I told you that you should stay outta here you aren't a part of my bounty gang crew!</span>
-            </p>
-        </div>
-        <div class="text-overlay text-middle">
-            <p>Han Solo:</p>
-            <p>
-                <span class="aurek-besh">Ya know a guy like me you oughtta treat him nicer for all of the things that I've smuggled for you in the past Jabba!</span>
-                <span class="english">You know, a guy like me, you ought to treat him nicer for all of the things that I've smuggled for you in the past, Jabba!</span>
-            </p>
-        </div>
-        
-        <img id="jabba" src="images/jabba.png" alt="Jabba the Hutt"/>
-        <img id="han" src="images/han.png" alt="HanSolo"/>
-        <img id="bounty" src="images/bounty-hunters.png" alt="Bounty Hunters"/>
+    <div id="jabba-original-dialogue" class="text-overlay text-top">
+        <p>Jabba:</p>
+        <p>
+            <span class="aurek-besh">What are you doing here?! I thought I told you that you should stay outta here you arn't apart of my bounty gang crew!</span>
+            <span class="english">What are you doing here?! I thought I told you that you aren't a part of my bounty gang crew!</span>
+        </p>
     </div>
+
+    <div id="jabba-reaction-dialogue" class="text-overlay text-top" style="display: none;">
+        <p>Jabba:</p>
+        <p>
+            <span class="aurek-besh">ah what did you do with my crew you iced them!</span>
+            <span class="english">Ah! What did you do with my crew?! You iced them!</span>
+        </p>
+    </div>
+
+    <div class="text-overlay text-middle">
+        <p>Han Solo:</p>
+        <p>
+            <span class="aurek-besh">Ya know a guy like me you oughtta treat him nicer for all of the things that I've smuggled for you in the past Jabba!</span>
+            <span class="english">You know, a guy like me, you ought to treat him nicer for all of the things that I've smuggled for you in the past, Jabba!</span>
+        </p>
+    </div>
+    
+    <button id="good-button">Click and guess to ice Jabba's bounty crew</button>
+    <div id="output"></div>
+    
+    <img id="jabba" src="images/jabba.png" alt="Jabba the Hutt"/>
+    <img id="han" src="images/han.png" alt="HanSolo"/>
+    <img id="bounty" src="images/bounty-hunters.png" alt="Bounty Hunters"/>
+</div>
 </body>
 </html>
-        
