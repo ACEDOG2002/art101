@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ART101</title>
+  <link rel="stylesheet" href="lab06.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="script6.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Creature Garden</h1>
+    <p id="subtitle">Add, display, and play with your creatures.</p>
+  </header>
+
+  <main>
+    <section id="creature-form" aria-labelledby="form-title">
+      <h2 id="form-title">Create a Creature</h2>
+      <div class="field">
+        <label for="crName">Name</label>
+        <input id="crName" type="text" placeholder="e.g., Momo" />
+      </div>
+      <div class="field">
+        <label for="crDesc">Description (optional)</label>
+        <input id="crDesc" type="text" placeholder="e.g., shy, loves blueberries" />
+      </div>
+      <div class="actions">
+        <button id="crAdd" type="button">Add Creature</button>
+        <button id="clearAll" type="button">Clear All</button>
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="creature-zone" aria-labelledby="zone-title">
+      <h2 id="zone-title">Your Garden</h2>
+      <div id="creature-list" aria-label="Creature list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>ART101 </small>
+  </footer>
+</body>
+</html>

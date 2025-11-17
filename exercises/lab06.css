@@ -1,0 +1,207 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    text-align: center;
+    background-color: #79a6d2; 
+    color: white;
+    padding: 20px 0;
+    border-bottom: 5px solid #5a8bbd;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+#subtitle {
+    margin-top: 0;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    display: flex;
+    gap: 30px;
+}
+
+
+#creature-form {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.field input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#crAdd {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#crAdd:hover {
+    background-color: #45a049;
+}
+
+#clearAll {
+    background-color: #f44336;
+    color: white;
+}
+
+#clearAll:hover {
+    background-color: #da190b;
+}
+
+#status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #e0f7fa;
+    color: #00796b;
+    border: 1px solid #b2ebf2;
+}
+
+
+#creature-zone {
+    flex: 2;
+}
+
+#zone-title {
+    margin-top: 0;
+    color: #5a8bbd;
+}
+
+
+#creature-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 20px;
+    background-color: #e6ffe6; 
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    min-height: 200px;
+    align-content: flex-start;
+}
+
+
+.card {
+    background-color: #ffffff; 
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 12px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: calc(33.333% - 14px); 
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    
+    
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #79a6d2;
+}
+
+.card p {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #666;
+}
+
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+
+
+@keyframes explode-enthusiasm {
+    0% {
+        transform: scale(1) rotate(0deg);
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    25% {
+        transform: scale(1.15) rotate(5deg);
+        background-color: #ff6347; 
+        box-shadow: 0 10px 20px rgba(255, 99, 71, 0.5); 
+    }
+    50% {
+        transform: scale(1.2) rotate(-5deg);
+        background-color: #ffd700; 
+    }
+    75% {
+        transform: scale(1.15) rotate(5deg);
+        background-color: #ff6347;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        background-color: #ffffff; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+.card.enthusiastic {
+    
+    animation: explode-enthusiasm 0.7s ease-in-out forwards;
+   
+    transition: none; 
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    color: #777;
+    border-top: 1px solid #eee;
+}

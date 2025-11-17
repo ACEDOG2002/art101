@@ -1,0 +1,44 @@
+body {
+    font-family: 'Courier New', Courier, monospace; 
+    color: #FFFFFF; 
+    margin: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px dashed #FF00FF; 
+    padding: 15px;
+    background-color: #000000;
+}
+
+
+.interactive-link {
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #FFFF00; 
+    color: #FF0000; 
+    padding: 10px;
+    border: 2px solid #FF0000;
+}
+
+
+#secret-content {
+    display: none; 
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    background-color: #333333; 
+}
+
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blinker {
+    animation: blink 0.5s step-end infinite;
+}
