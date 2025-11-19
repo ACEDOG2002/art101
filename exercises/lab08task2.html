@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8</title>
+    <link rel="stylesheet" href="lab08task2.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="lab08task2.js" defer></script>
+</head>
+
+<body>
+    
+    <h1>Lab 8 Task 2</h1>
+    
+    <button id="reset-button">🔄 Reset</button>
+    
+    <div id="selection-area">
+        <h2>Choose Your Starter!</h2>
+        <button id="select-bulbasaur" data-pokemon="bulbasaur">Bulbasaur</button>
+        <button id="select-charmander" data-pokemon="charmander">Charmander</button>
+        <button id="select-squirtle" data-pokemon="squirtle">Squirtle</button>
+        <button id="select-pikachu" data-pokemon="pikachu">Pikachu</button>
+    </div>
+    
+    <div id="status-message">Click the Poké Ball to begin!</div>
+
+    <div id="game-container">
+        <div id="creature"></div>
+        <div id="squirtle" class="hidden squirtle"></div> 
+    </div>
+
+</body>
+</html>
