@@ -2,106 +2,170 @@
 body {
     height: 100vh;
     margin: 0;
-    background-color: #78c850; 
+    background-color: #97ff57bf;
     
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
-    gap: 15px; 
+    gap: 20px; 
+    font-family: Helvetica;
+    color: #2c3e50; 
 }
-
-h1 { margin-bottom: 10px; }
-#reset-button {
+h1 { 
+    margin-bottom: 5px; 
+    color: #e74d3c73; 
+    text-shadow: 1px 1px 1px #fff;
+}
+h2 { color: #3498db73; } 
+.action-button, .select-pokemon {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    background-color: #fff;
-    border: 2px solid #5a5a5a;
-    transition: background 0.2s;
+    border-radius: 8px;
+    border: 3px solid #333;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px #999;
+    background-color: #f0f0f0;
 }
-#reset-button:hover { background-color: #e0e0e0; }
-
+#reset-button {
+    background-color: #f39c12; 
+    color: white;
+    border-color: #e67e22;
+    box-shadow: 0 4px #d35400;
+}
+#reset-button:active {
+    box-shadow: 0 1px #d35400;
+    transform: translateY(3px);
+}
+.starter-buttons {
+    display: flex;
+    gap: 10px;
+}
+.select-pokemon:hover { 
+    background-color: #fff;
+    transform: translateY(-1px);
+}
+.select-pokemon.selected {
+    box-shadow: 0 0 10px 2px #00bfff;
+    border-color: #45b5ff;
+}
+.select-pokemon[data-pokemon="bulbasaur"] { background-color: #82CB71; }
+.select-pokemon[data-pokemon="charmander"] { background-color: #FF7B51; }
+.select-pokemon[data-pokemon="squirtle"] { background-color: #6592D1; }
+.select-pokemon[data-pokemon="pikachu"] { background-color: #FFD95E; }
 #selection-area {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-#selection-area button {
-    padding: 8px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
+    gap: 15px;
+    padding: 15px;
     border: 1px solid #ccc;
-    transition: background 0.3s;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
-#selection-area button:hover { background-color: #eee; }
-#status-message { font-weight: bold; color: #333; }
+#status-message { 
+    font-weight: bold; 
+    color: #c0392b; 
+    font-size: 1.1em;
+    min-height: 20px; 
+}
 #game-container {
     position: relative; 
-    height: 180px; 
-    width: 200px;
+    height: 200px; 
+    width: 250px; 
 }
-#creature {
-    width: 120px; height: 120px; background: rgb(255, 0, 0); border-radius: 60px;
-    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); 
-    overflow: hidden; border: 4px solid black; cursor: pointer; z-index: 10; 
+.pokeball-device {
+    width: 150px; 
+    height: 150px; 
+    background: #fff; 
+    border-radius: 50%;
+    
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    
+    overflow: hidden; 
+    border: 6px solid black; 
+    cursor: pointer; 
+    z-index: 10; 
+    
     transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
-#creature:hover { transform: translateX(-50%) scale(1.05); }
-#creature::before {
-    content: ""; display: block; width: 120px; height: 60px; background: white;
-    position: absolute; bottom: 0; left: 0;
+.pokeball-device:hover { 
+    transform: translateX(-50%) scale(1.05); 
 }
-#creature::after {
-    content: ""; display: block; width: 40px; height: 40px; background: white;
-    border: 6px solid black; border-radius: 50%; position: absolute;
-    top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;
+/* Top Red Half */
+.pokeball-device::before {
+    content: ""; 
+    display: block; 
+    width: 100%; 
+    height: 50%; 
+    background: #e74c3c; 
+    position: absolute; 
+    top: 0; 
+    left: 0;
 }
-#squirtle {
+.pokeball-device::after {
+    content: ""; 
+    display: block; 
+    width: 40px; 
+    height: 40px; 
+    background: white;
+    border: 6px solid black; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1;
+}
+.pokemon-display {
+    width: 120px; 
+    height: 120px; 
     
-    width: 100px; 
-    height: 100px; 
-    
-    border-radius: 0; 
-    border: none; 
-    
-    position: absolute; left: 50%;
-    bottom: -150px; 
+    position: absolute; 
+    left: 50%;
+    bottom: -200px; 
     transform: translateX(-50%);
+    
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain; 
     
-    transition: background-image 0.5s; 
+    transition: bottom 0.5s ease-out, opacity 0.3s; 
     z-index: 5;
 }
-#squirtle.hidden { display: none !important; }
-#squirtle.squirtle { 
+.pokemon-display.hidden { 
+    display: none !important; 
+}
+.pokemon-display.active {
+    bottom: 20px; 
+}
+.pokemon-display[data-pokemon-name] { 
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: alternate;
+    animation-delay: 0.5s; 
+}
+.pokemon-display[data-pokemon-name="squirtle"] { 
     background-image: url('images/Squirtle.jpg'); 
-    animation: pop-up 0.5s ease-out forwards, attack 0.6s 0.6s infinite alternate; 
-    
+    animation-name: attack; 
 }
-#squirtle.bulbasaur { 
+.pokemon-display[data-pokemon-name="bulbasaur"] { 
     background-image: url('images/Bulbasaur.jpg'); 
-    animation: pop-up 0.5s ease-out forwards, idle-bob 0.8s 0.6s infinite alternate; 
+    animation-name: idle-bob; 
 }
-#squirtle.charmander { 
+.pokemon-display[data-pokemon-name="charmander"] { 
     background-image: url('images/Charmander.jpg'); 
-    animation: pop-up 0.5s ease-out forwards, attack-fire 0.4s 0.6s infinite alternate; 
-    height: 120px; 
+    height: 130px; 
+    animation-name: attack-fire; 
 }
-#squirtle.pikachu { 
+.pokemon-display[data-pokemon-name="pikachu"] { 
     background-image: url('images/Pikachu.jpg'); 
-    animation: pop-up 0.5s ease-out forwards, static-shock 0.3s 0.6s infinite alternate; 
-    height: 110px; 
-}
-@keyframes pop-up {
-    0% { bottom: -150px; opacity: 0; } 100% { bottom: 0px; opacity: 1; }
+    height: 120px; 
+    animation-name: static-shock; 
 }
 @keyframes attack {
     0% { transform: translate(-50%, 0); } 50% { transform: translate(-55%, -5px); } 100% { transform: translate(-45%, 0); }
