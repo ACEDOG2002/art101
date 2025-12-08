@@ -1,6 +1,4 @@
 
-
-
 const environmentName = "Jabba's Palace: Tatooine Crime Den";
 
 const keyArtifacts = ["Carbonite Block", "Slave Leia's Chain", "Holochess Table", "Rancor Pit Trap"];

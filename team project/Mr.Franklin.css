@@ -1,0 +1,154 @@
+H1, H3 {color: #0c3a2c; text-decoration-color:#72998a; 'Times New Roman', Times, serif;}
+body {color: #41340c; 'Times New Roman', Times, serif;}
+h1 {color:#192b52 ; background-color: #587e4c;'Times New Roman', Times, serif;
+
+position:fixed;
+    top: -10px;
+    right: 270px;}
+}
+
+body {
+    background-image: url(Background-small.jpeg);
+    background-attachment: fixed;
+    background-size: 100;
+}
+#Dresser {width: 450px;}
+#Shopkeeper {width: 450px;}
+#CatMug {width: 80px;} 
+#SkullLamp {width: 80px;}
+#Lighter {width: 25px;}
+#Pearls {width: 80px;}
+#CD {width: 100px;}
+#Hanger2 {width: 150px;}
+#AlienTee {width: 200px;}
+#Hanger1 {width: 150px;}
+#Sweater {width: 300px;}
+
+
+#Shopkeeper {
+    position:fixed;
+    top: 20px;
+    left: -100px;
+
+}
+
+.image-container {
+    position:relative;
+}
+#photo-container{
+    display:flex;
+
+}
+.photo{
+    position: relative;
+    width: 400px;
+
+}
+.photo .description{
+    position:fixed;
+    top: 125px;
+    right: 350px;
+    background color:rgba(0,0,0,0.6);
+    color: white;
+    padding: 24px;
+    display: none;
+
+}
+
+photo:hover .description {
+    display: block;
+
+}
+
+#CatMug {
+    position:fixed;
+    top: 125px;
+    right: 350px;
+  
+}
+
+#SkullLamp {
+    position:fixed;
+    top: 80px;
+    right: 200px;
+  
+}
+.image-container {
+    position:relative;
+}
+
+#Lighter {
+    position:fixed;
+    top: 370px;
+    right: 157px;
+  
+}
+.image-container {
+    position:relative;
+}
+
+#Pearls {
+    position:fixed;
+    top: 250px;
+    right: 310px;
+  
+}
+.image-container {
+    position:relative;
+}
+
+#CD {
+    position:fixed;
+    top: 415px;
+    right: 155px;
+  
+}
+.image-container {
+    position:relative;
+}
+.image-container {
+    position:relative;
+}
+
+#Hanger2 {
+    position:fixed;
+    top: 20px;
+    right: 660px;
+  
+}
+
+#AlienTee {
+    position:fixed;
+    top: 70px;
+    right: 630px;
+  
+}
+
+}
+.image-container {
+    position:relative;
+}
+
+#Hanger1 {
+    position:fixed;
+    top: 250px;
+    right: 630px;
+  
+}
+#Sweater {
+    position:fixed;
+    top: 270px;
+    right: 560px;
+  
+}
+.image-container {
+    position:relative;
+}
+
+#Dresser {
+    position:fixed;
+    top: 50px;
+    right: 100px;
+.image-container {
+    position:relative;
+}
